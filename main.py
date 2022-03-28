@@ -3,7 +3,7 @@
 import os
 from keras.preprocessing import image
 
-folders = os.listdir('dataset')
+folders = os.listdir('/dataset')
 
 image_data = []
 labels = []
@@ -12,7 +12,7 @@ count = 0
 for ix in folders:
     path = os.path.join("/dataset", ix)
     print(path, count)
-    if(path!="/content/drive/MyDrive/Dataset/.ipynb_checkpoints"):
+    if(path!="/dataset/.ipynb_checkpoints"):
       for im in os.listdir(path):
           try:
               img = image.load_img(os.path.join(path,im), target_size = (224,224))
